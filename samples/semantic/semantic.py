@@ -290,7 +290,7 @@ def predict():
     print("loading weights from ",model_path)
     model.load_weights(model_path,by_name=True)
     
-    class_names = ['BG','LD']
+    class_names = ['fault','boudinage','fold']
     file_names = next(os.walk(IMAGE_DIR))[2]
     image = skimage.io.imread(os.path.join(IMAGE_DIR, random.choice(file_names)))
     
